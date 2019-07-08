@@ -6,7 +6,7 @@ dist: xenial
 before_install:
   - curl -L https://noc.one/ubuntu | bash
   - sudo apt clean all && sudo apt -qq -y update
-  - sudo apt install -y p7zip
+  - sudo apt install -y p7zip p7zip-full wget
 install:
   - chmod +x ./download.sh
   - chmod +x ./deploy.sh
