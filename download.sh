@@ -6,7 +6,7 @@ get_latest_release() {
         sed -E 's/.*"([^"]+)".*/\1/' # Pluck JSON value
 }
 
-git clone https://github.com/sspanel-uim/ssr-download.git deploy
+git clone https://github.com/xcxnig/ssr-download.git deploy
 
 # Clash for Windows
 
