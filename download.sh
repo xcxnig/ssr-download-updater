@@ -25,7 +25,8 @@ wget -o /dev/null -O Clash-Windows/Clash.for.Windows.Setup.$clash_for_windows_pk
 mv -f Clash-Windows.7z ./deploy/Clash-Windows.7z
 rm -rf Clash-Windows
 
-sleep 10
+echo "Sleep for 30 seconds for not get too high..."
+sleep 30
 
 # clashX(macOS)
 
@@ -41,7 +42,8 @@ echo "--------------------------------------------------------------------------
 wget -o /dev/null -O ClashX.dmg "https://github.com/yichengchen/clashX/releases/download/$clashx_version/ClashX.dmg"
 mv -f ClashX.dmg ./deploy/ClashX.dmg
 
-sleep 10
+echo "Sleep for 30 seconds for not get too high..."
+sleep 30
 
 # Shadowsocks Android
 
@@ -57,7 +59,8 @@ echo "--------------------------------------------------------------------------
 wget -o /dev/null -O ss-android.apk "https://github.com/shadowsocks/shadowsocks-android/releases/download/v$ss_android_version/shadowsocks--universal-$ss_android_version.apk"
 mv -f ss-android.apk ./deploy/ss-android.apk
 
-sleep 10
+echo "Sleep for 30 seconds for not get too high..."
+sleep 30
 
 # Shadowsocks Windows
 
@@ -73,7 +76,8 @@ echo "--------------------------------------------------------------------------
 wget -o /dev/null -O ss-win.zip "https://github.com/shadowsocks/shadowsocks-windows/releases/download/$ss_windows_version/Shadowsocks-$ss_windows_version.zip"
 mv -f ss-win.zip ./deploy/ss-win.zip
 
-sleep 10
+echo "Sleep for 30 seconds for not get too high..."
+sleep 30
 
 # ShadowsocksX-NG
 
@@ -89,7 +93,8 @@ echo "--------------------------------------------------------------------------
 wget -o /dev/null -O ss-mac.zip "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v$ss_mac_version/ShadowsocksX-NG.app.$ss_mac_version.zip"
 mv -f ss-mac.zip ./deploy/ss-mac.zip
 
-sleep 10
+echo "Sleep for 30 seconds for not get too high..."
+sleep 30
 
 # ShadowsocksD Android
 
@@ -105,7 +110,8 @@ echo "--------------------------------------------------------------------------
 wget -o /dev/null -O ssd-android.apk "https://github.com/TheCGDF/SSD-Android/releases/download/$ssd_android_version/shadowsocksd_$ssd_android_version.apk"
 mv -f ssd-android.apk ./deploy/ssd-android.apk
 
-sleep 10
+echo "Sleep for 30 seconds for not get too high..."
+sleep 30
 
 # ShadowsocksD Windows
 
@@ -125,7 +131,8 @@ rm -rf ssd-win.zip
 7za a ssd-win.7z ShadowsocksD.exe
 mv -f ssd-win.7z ./deploy/ssd-win.7z
 
-sleep 10
+echo "Sleep for 30 seconds for not get too high..."
+sleep 30
 
 # ShadowsocksRR Android
 
@@ -141,7 +148,8 @@ echo "--------------------------------------------------------------------------
 wget -o /dev/null -O ssrr-android.apk "https://github.com/shadowsocksrr/shadowsocksr-android/releases/download/$ssrr_android_version/shadowsocksr-android-$ssrr_android_version.apk"
 mv -f ssrr-android.apk ./deploy/ssrr-android.apk
 
-sleep 10
+echo "Sleep for 30 seconds for not get too high..."
+sleep 30
 
 # V2RayNG
 
