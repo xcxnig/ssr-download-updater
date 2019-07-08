@@ -107,10 +107,10 @@ echo "Latest Verison: $ssd_windows_version"
 echo "---------------------------------------------------------------------------"
 
 mkdir -p SSD-Windows
-wget -o /dev/null -O SSD-Windows/ssd-win.zip "https://github.com/TheCGDF/SSD-Windows/releases/download/$ssd_windows_version/Shadowsocks-$ssd_windows_version.zip"
-cd SSD-Windows && unzip ssd-win.zip && cd ..
-rm -rf SSD-Windows/ssd-win.zip
-7za a ssd-win.7z ./SSD-Windows/*
+wget -o /dev/null -O ssd-win.zip "https://github.com/TheCGDF/SSD-Windows/releases/download/$ssd_windows_version/Shadowsocks-$ssd_windows_version.zip"
+unzip ssd-win.zip
+rm -rf ssd-win.zip
+7za a ssd-win.7z ShadowsocksD.exe
 mv -f ssd-win.7z ./deploy/ssd-win.7z
 
 # ShadowsocksRR Android
