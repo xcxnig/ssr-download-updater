@@ -45,12 +45,12 @@ echo "==========================================================================
 echo "* Shadowsocks Android"
 echo "https://github.com/shadowsocks/shadowsocks-android"
 
-ss_android_version=$(get_latest_release "shadowsocks/shadowsocks-android")
+ss_android_version=$(get_latest_release "shadowsocks/shadowsocks-android" | sed 's|v||g')
 
 echo "Latest Verison: $ss_android_version"
 echo "---------------------------------------------------------------------------"
 
-wget -o /dev/null -O ss-android.apk "https://github.com/shadowsocks/shadowsocks-android/releases/download/$ss_android_version/shadowsocks--universal-$ss_android_version.apk"
+wget -o /dev/null -O ss-android.apk "https://github.com/shadowsocks/shadowsocks-android/releases/download/v$ss_android_version/shadowsocks--universal-$ss_android_version.apk"
 mv -f ss-android.apk ./deploy/ss-android.apk
 
 # Shadowsocks Windows
