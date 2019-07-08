@@ -21,7 +21,7 @@ echo "--------------------------------------------------------------------------
 
 mkdir -p Clash-Windows
 wget -O Clash-Windows/Clash.for.Windows.Setup.$clash_for_windows_pkg_version.exe "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/$clash_for_windows_pkg_version/Clash.for.Windows.Setup.$clash_for_windows_pkg_version.exe"
-7za a Clash-Windows.7z ./Clash-Windows/*
+7z a Clash-Windows.7z ./Clash-Windows/*
 mv -f Clash-Windows.7z ./deploy/Clash-Windows.7z
 rm -rf Clash-Windows
 
