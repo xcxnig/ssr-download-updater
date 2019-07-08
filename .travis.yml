@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '11'
+sudo: enabled
+dist: xenial
+before_install:
+  - curl -L https://noc.one/ubuntu | bash
+  - sudo apt clean all && sudo apt -qq -y update
+  - sudo apt install -y p7zip
+install:
+  - chmod +x ./download.sh
+  - chmod +x ./deploy.sh
+script:
+  - ./download.sh
+  - ./deploy.sh
