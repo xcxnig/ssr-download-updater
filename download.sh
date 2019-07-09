@@ -17,16 +17,16 @@ echo "https://github.com/Fndroid/clash_for_windows_pkg"
 clash_for_windows_pkg_version=$(get_latest_release "Fndroid/clash_for_windows_pkg")
 
 echo "Latest Verison: $clash_for_windows_pkg_version"
-echo "---------------------------------------------------------------------------"
+
 
 mkdir -p Clash-Windows
 wget -o /dev/null -O Clash-Windows/Clash.for.Windows.Setup.$clash_for_windows_pkg_version.exe "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/$clash_for_windows_pkg_version/Clash.for.Windows.Setup.$clash_for_windows_pkg_version.exe"
 7za a Clash-Windows.7z ./Clash-Windows/*
-mv -f Clash-Windows.7z ./deploy/Clash-Windows.7z
+[ -d "Clash-Windows.7z" ] && mv -f Clash-Windows.7z ./deploy/Clash-Windows.7z
 rm -rf Clash-Windows
 
-echo "Sleep for 30 seconds for not get too high..."
-sleep 30
+
+sleep 35
 
 # clashX(macOS)
 
@@ -37,13 +37,13 @@ echo "https://github.com/yichengchen/clashX"
 clashx_version=$(get_latest_release "yichengchen/clashX")
 
 echo "Latest Verison: $clashx_version"
-echo "---------------------------------------------------------------------------"
+
 
 wget -o /dev/null -O ClashX.dmg "https://github.com/yichengchen/clashX/releases/download/$clashx_version/ClashX.dmg"
-mv -f ClashX.dmg ./deploy/ClashX.dmg
+[ -d "ClashX.dmg" ] && mv -f ClashX.dmg ./deploy/ClashX.dmg
 
-echo "Sleep for 30 seconds for not get too high..."
-sleep 30
+
+sleep 35
 
 # Shadowsocks Android
 
@@ -54,13 +54,13 @@ echo "https://github.com/shadowsocks/shadowsocks-android"
 ss_android_version=$(get_latest_release "shadowsocks/shadowsocks-android" | sed 's|v||g')
 
 echo "Latest Verison: $ss_android_version"
-echo "---------------------------------------------------------------------------"
+
 
 wget -o /dev/null -O ss-android.apk "https://github.com/shadowsocks/shadowsocks-android/releases/download/v$ss_android_version/shadowsocks--universal-$ss_android_version.apk"
-mv -f ss-android.apk ./deploy/ss-android.apk
+[ -d "ss-android.apk" ] && mv -f ss-android.apk ./deploy/ss-android.apk
 
-echo "Sleep for 30 seconds for not get too high..."
-sleep 30
+
+sleep 35
 
 # Shadowsocks Windows
 
@@ -71,13 +71,13 @@ echo "https://github.com/shadowsocks/shadowsocks-windows"
 ss_windows_version=$(get_latest_release "shadowsocks/shadowsocks-windows")
 
 echo "Latest Verison: $ss_windows_version"
-echo "---------------------------------------------------------------------------"
+
 
 wget -o /dev/null -O ss-win.zip "https://github.com/shadowsocks/shadowsocks-windows/releases/download/$ss_windows_version/Shadowsocks-$ss_windows_version.zip"
-mv -f ss-win.zip ./deploy/ss-win.zip
+[ -d "ss-win.zip" ] && mv -f ss-win.zip ./deploy/ss-win.zip
 
-echo "Sleep for 30 seconds for not get too high..."
-sleep 30
+
+sleep 35
 
 # ShadowsocksX-NG
 
@@ -88,13 +88,13 @@ echo "https://github.com/shadowsocks/ShadowsocksX-NG"
 ss_mac_version=$(get_latest_release "shadowsocks/ShadowsocksX-NG" | sed 's|v||g')
 
 echo "Latest Verison: $ss_mac_version"
-echo "---------------------------------------------------------------------------"
+
 
 wget -o /dev/null -O ss-mac.zip "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v$ss_mac_version/ShadowsocksX-NG.app.$ss_mac_version.zip"
-mv -f ss-mac.zip ./deploy/ss-mac.zip
+[ -d "ss-mac.zip" ] && mv -f ss-mac.zip ./deploy/ss-mac.zip
 
-echo "Sleep for 30 seconds for not get too high..."
-sleep 30
+
+sleep 35
 
 # ShadowsocksD Android
 
@@ -105,13 +105,13 @@ echo "https://github.com/TheCGDF/SSD-Android"
 ssd_android_version=$(get_latest_release "TheCGDF/SSD-Android")
 
 echo "Latest Verison: $ssd_android_version"
-echo "---------------------------------------------------------------------------"
+
 
 wget -o /dev/null -O ssd-android.apk "https://github.com/TheCGDF/SSD-Android/releases/download/$ssd_android_version/shadowsocksd_$ssd_android_version.apk"
-mv -f ssd-android.apk ./deploy/ssd-android.apk
+[ -d "ssd-android.apk" ] && mv -f ssd-android.apk ./deploy/ssd-android.apk
 
-echo "Sleep for 30 seconds for not get too high..."
-sleep 30
+
+sleep 35
 
 # ShadowsocksD Windows
 
@@ -122,17 +122,17 @@ echo "https://github.com/TheCGDF/SSD-Windows"
 ssd_windows_version=$(get_latest_release "TheCGDF/SSD-Windows")
 
 echo "Latest Verison: $ssd_windows_version"
-echo "---------------------------------------------------------------------------"
+
 
 mkdir -p SSD-Windows
 wget -o /dev/null -O ssd-win.zip "https://github.com/TheCGDF/SSD-Windows/releases/download/$ssd_windows_version/Shadowsocks-$ssd_windows_version.zip"
 unzip ssd-win.zip
 rm -rf ssd-win.zip
 7za a ssd-win.7z ShadowsocksD.exe
-mv -f ssd-win.7z ./deploy/ssd-win.7z
+[ -d "ssd-win.7z" ] && mv -f ssd-win.7z ./deploy/ssd-win.7z
 
-echo "Sleep for 30 seconds for not get too high..."
-sleep 30
+
+sleep 35
 
 # ShadowsocksRR Android
 
@@ -143,13 +143,13 @@ echo "https://github.com/shadowsocksrr/shadowsocksr-android"
 ssrr_android_version=$(get_latest_release "shadowsocksrr/shadowsocksr-android")
 
 echo "Latest Verison: $ssrr_android_version"
-echo "---------------------------------------------------------------------------"
+
 
 wget -o /dev/null -O ssrr-android.apk "https://github.com/shadowsocksrr/shadowsocksr-android/releases/download/$ssrr_android_version/shadowsocksr-android-$ssrr_android_version.apk"
-mv -f ssrr-android.apk ./deploy/ssrr-android.apk
+[ -d "ssrr-android.apk" ] && mv -f ssrr-android.apk ./deploy/ssrr-android.apk
 
-echo "Sleep for 30 seconds for not get too high..."
-sleep 30
+
+sleep 35
 
 # V2RayNG
 
@@ -160,7 +160,7 @@ echo "https://github.com/2dust/v2rayNG"
 v2rayng_android_version=$(get_latest_release "2dust/v2rayNG")
 
 echo "Latest Verison: $v2rayng_android_version"
-echo "---------------------------------------------------------------------------"
+
 
 wget -o /dev/null -O v2rayng.apk "https://github.com/2dust/v2rayNG/releases/download/$v2rayng_android_version/app-universal-release.apk"
-mv -f v2rayng.apk ./deploy/v2rayng.apk
+[ -d "v2rayng.apk" ] && mv -f v2rayng.apk ./deploy/v2rayng.apk
