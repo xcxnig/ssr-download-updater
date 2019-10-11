@@ -164,3 +164,18 @@ echo "Latest Verison: $v2rayng_android_version"
 
 wget -o /dev/null -O v2rayng.apk "https://github.com/2dust/v2rayNG/releases/download/$v2rayng_android_version/app-universal-release.apk"
 [ -f "v2rayng.apk" ] && mv -vf v2rayng.apk ./deploy/v2rayng.apk
+
+sleep 35
+
+# V2RayU
+
+echo "==========================================================================="
+echo "* V2RayU (macOS)"
+echo "https://github.com/yanue/V2rayU"
+
+v2rayu_version=$(get_latest_release "yanue/V2rayU")
+
+echo "Latest Verison: $v2rayu_version"
+
+wget -o /dev/null -O v2rayng.apk "https://github.com/yanue/V2rayU/releases/download/$v2rayu_version/V2rayU.dmg"
+[ -f "V2rayU.dmg" ] && mv -vf V2rayU.dmg ./deploy/V2rayU.dmg
