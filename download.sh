@@ -163,7 +163,7 @@ echo "Latest Verison: $v2rayng_android_version"
 
 
 wget -o /dev/null -O v2rayng.apk "https://github.com/2dust/v2rayNG/releases/download/$v2rayng_android_version/app-universal-release.apk"
-[ -f "v2rayng.apk" ] ssrr-android.apk v2rayng.apk && mv -vf v2rayng.apk ./deploy/v2rayng.apk
+[ -f "v2rayng.apk" ] && chmod 766 v2rayng.apk && mv -vf v2rayng.apk ./deploy/v2rayng.apk
 
 sleep 35
 
@@ -192,6 +192,6 @@ echo "Latest Verison: $clash_android_version"
 
 
 wget -o /dev/null -O clash-android.apk "https://github.com/Kr328/ClashForAndroid/releases/download/$clash_android_version/app-universal-release.apk"
-[ -f "clash-android.apk" ] && chmod 766 clash-android.apk && mv -vf clash-android.apk ./deploy/vclash-android.apk
+[ -f "clash-android.apk" ] && chmod 766 clash-android.apk && mv -vf clash-android.apk ./deploy/clash-android.apk
 
 sleep 35
