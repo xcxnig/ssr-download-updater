@@ -90,7 +90,7 @@ ss_mac_version=$(get_latest_release "shadowsocks/ShadowsocksX-NG" | sed 's|v||g'
 echo "Latest Verison: $ss_mac_version"
 
 
-wget -o /dev/null -O ss-mac.zip "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v$ss_mac_version/ShadowsocksX-NG.app.$ss_mac_version.zip"
+wget -o /dev/null -O ss-mac.zip "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v$ss_mac_version/ShadowsocksX-NG.$ss_mac_version.zip"
 [ -f "ss-mac.zip" ] && chmod 766 ss-mac.zip && mv -vf ss-mac.zip ./deploy/ss-mac.zip
 
 
@@ -162,7 +162,7 @@ v2rayng_android_version=$(get_latest_release "2dust/v2rayNG")
 echo "Latest Verison: $v2rayng_android_version"
 
 
-wget -o /dev/null -O v2rayng.apk "https://github.com/2dust/v2rayNG/releases/download/$v2rayng_android_version/app-universal-release.apk"
+wget -o /dev/null -O v2rayng.apk "https://github.com/2dust/v2rayNG/releases/download/$v2rayng_android_version/v2rayNG_$v2rayng_android_version.apk"
 [ -f "v2rayng.apk" ] && chmod 766 v2rayng.apk && mv -vf v2rayng.apk ./deploy/v2rayng.apk
 
 sleep 35
@@ -194,4 +194,4 @@ echo "Latest Verison: $clash_android_version"
 wget -o /dev/null -O clash-android.apk "https://github.com/Kr328/ClashForAndroid/releases/download/$clash_android_version/app-universal-release.apk"
 [ -f "clash-android.apk" ] && chmod 766 clash-android.apk && mv -vf clash-android.apk ./deploy/clash-android.apk
 
-sleep 35
+echo "Download Successful"
