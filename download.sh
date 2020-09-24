@@ -107,7 +107,7 @@ ssd_android_version=$(get_latest_release "TheCGDF/SSD-Android")
 echo "Latest Verison: $ssd_android_version"
 
 
-wget -o /dev/null -O ssd-android.apk "https://github.com/TheCGDF/SSD-Android/releases/download/$ssd_android_version/shadowsocksd_$ssd_android_version.apk"
+wget -o /dev/null -O ssd-android.apk "https://github.com/TheCGDF/SSD-Android/releases/download/$ssd_android_version/SSD-$ssd_android_version-mobile.apk"
 [ -f "ssd-android.apk" ] && chmod 766 ssd-android.apk && mv -vf ssd-android.apk ./deploy/ssd-android.apk
 
 
@@ -125,11 +125,10 @@ echo "Latest Verison: $ssd_windows_version"
 
 
 mkdir -p SSD-Windows
-wget -o /dev/null -O ssd-win.zip "https://github.com/TheCGDF/SSD-Windows/releases/download/$ssd_windows_version/Shadowsocks-$ssd_windows_version.zip"
-unzip ssd-win.zip
-rm -rf ssd-win.zip
-7za a ssd-win.7z ShadowsocksD.exe
-[ -f "ssd-win.7z" ] && chmod 766 ssd-win.7z && mv -vf ssd-win.7z ./deploy/ssd-win.7z
+wget -o /dev/null -O SSD-Windows/ssd-win.exe "https://github.com/TheCGDF/SSD-Windows/releases/download/$ssd_windows_version/SSD-$ssd_windows_version-x86.exe"
+7za a ssd-win.7z ./SSD-Windows/*
+[ -f "./ssd-win.7z" ] && chmod 766 ssd-win.7z && mv -vf ssd-win.7z ./deploy/ssd-win.7z
+rm -rf SSD-Windows
 
 
 sleep 35
@@ -177,8 +176,10 @@ v2rayu_version=$(get_latest_release "yanue/V2rayU")
 
 echo "Latest Verison: $v2rayu_version"
 
-wget -o /dev/null -O v2rayng.apk "https://github.com/yanue/V2rayU/releases/download/$v2rayu_version/V2rayU.dmg"
+wget -o /dev/null -O V2rayU.dmg "https://github.com/yanue/V2rayU/releases/download/$v2rayu_version/V2rayU.dmg"
 [ -f "V2rayU.dmg" ] && chmod 766 V2rayU.dmg && mv -vf V2rayU.dmg ./deploy/V2rayU.dmg
+
+sleep 35
 
 # Clash for Android
 
