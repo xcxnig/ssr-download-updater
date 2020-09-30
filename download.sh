@@ -208,7 +208,7 @@ v2rayn_version=$(get_latest_release "2dust/v2rayN")
 echo "Latest Verison: $v2rayn_version"
 
 wget -o /dev/null -O V2rayN.zip "https://github.com/2dust/v2rayN/releases/download/$v2rayn_version/v2rayN-Core.zip"
-[ -f "V2rayN.zip" ] && chmod 766 V2rayN.zip && mv -vf V2rayN.zip /home/download/v2ray/macos/v2rayn-windows.zip
+[ -f "V2rayN.zip" ] && chmod 766 V2rayN.zip && mv -vf V2rayN.zip ./deploy/v2rayn.zip
 
 sleep 35
 
