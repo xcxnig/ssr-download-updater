@@ -195,4 +195,21 @@ echo "Latest Verison: $clash_android_version"
 wget -o /dev/null -O clash-android.apk "https://github.com/Kr328/ClashForAndroid/releases/download/$clash_android_version/app-universal-release.apk"
 [ -f "clash-android.apk" ] && chmod 766 clash-android.apk && mv -vf clash-android.apk ./deploy/clash-android.apk
 
+sleep 35
+
+# V2RayN
+
+echo "==========================================================================="
+echo "* V2RayN (Windows)"
+echo "https://github.com/2dust/v2rayN"
+
+v2rayn_version=$(get_latest_release "2dust/v2rayN")
+
+echo "Latest Verison: $v2rayn_version"
+
+wget -o /dev/null -O V2rayN.zip "https://github.com/2dust/v2rayN/releases/download/$v2rayn_version/v2rayN-Core.zip"
+[ -f "V2rayN.zip" ] && chmod 766 V2rayN.zip && mv -vf V2rayN.zip /home/download/v2ray/macos/v2rayn-windows.zip
+
+sleep 35
+
 echo "Download Successful"
